@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For Coaches — Gevity</title>
+  <meta name="description" content="Gevity gives coaches visibility into client progress and the ability to suggest or push adjustments — without the overhead of a separate coaching platform.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="logo">gevity<span class="logo-accent">.fit</span></a>
+      <div class="nav-links">
+        <a href="/how-it-works.html">How it works</a>
+        <a href="/for-coaches.html" class="nav-active">For coaches</a>
+      </div>
+      <a href="https://app.gevity.fit/onboarding" class="btn btn-green">Sign up for free</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="tag"><span class="tag-dot"></span>For coaches</div>
+      <h1>Your clients, making<br>progress between sessions.</h1>
+      <p class="body-text hero-sub">Gevity isn't a coaching platform. It's the app your clients use to stay consistent — and it gives you just enough visibility to make a difference, without becoming another tool to manage.</p>
+    </div>
+  </section>
+
+  <!-- How the connection works -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <h2>Two ways to connect.</h2>
+        <p class="body-text">Either party can initiate — whatever works for how you and your clients operate.</p>
+      </div>
+      <div class="grid-2">
+        <div class="card">
+          <div class="feature-label">You invite them</div>
+          <h3>Send your clients a link</h3>
+          <p class="body-text">From your coach dashboard, generate a personal invite link. When your client signs up through it, they're connected to you automatically — with your default permissions already in place.</p>
+          <div class="card-note">Good for coaches onboarding a new client cohort all at once.</div>
+        </div>
+        <div class="card">
+          <div class="feature-label">They invite you</div>
+          <h3>Your client connects you</h3>
+          <p class="body-text">A client who's already using Gevity can share a link that brings you in as their coach. You'll get a notification, accept the connection, and you're in — with the same default permissions.</p>
+          <div class="card-note">Good for clients who found Gevity on their own and want to loop you in.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Permissions -->
+  <section class="section">
+    <div class="container">
+      <div class="feature-block">
+        <div class="feature-copy">
+          <div class="feature-label">How much access?</div>
+          <h2>Suggest. Or push.<br>Your client decides.</h2>
+          <p class="body-text">When a client connects with you, you get two things by default: visibility into their workouts, and the ability to suggest adjustments.</p>
+          <p class="body-text">A suggestion is exactly what it sounds like — a note attached to a specific exercise that says something like <em>"try bumping this to 185 next time."</em> Your client sees it in the app and during their workout. One tap to accept, one tap to skip.</p>
+          <p class="body-text">If a client trusts you to just make the call, they can give you <strong>auto-apply access</strong> — your adjustments go straight into their plan without requiring approval. They'll still see what changed and why, so there are no surprises mid-workout.</p>
+          <div class="permission-levels">
+            <div class="permission-level">
+              <div class="permission-icon permission-view">👁</div>
+              <div>
+                <div class="permission-name">Visibility</div>
+                <div class="permission-desc">See workout history, consistency, and progress. Default for all connections.</div>
+              </div>
+            </div>
+            <div class="permission-level">
+              <div class="permission-icon permission-suggest">💬</div>
+              <div>
+                <div class="permission-name">Suggest</div>
+                <div class="permission-desc">Attach notes and recommended adjustments. Client approves each one. Default for all connections.</div>
+              </div>
+            </div>
+            <div class="permission-level">
+              <div class="permission-icon permission-push">⚡</div>
+              <div>
+                <div class="permission-name">Auto-apply</div>
+                <div class="permission-desc">Your changes go straight into the plan. Client-controlled — they turn this on if they want it.</div>
+              </div>
+            </div>
+          </div>
+          <p class="body-text" style="margin-top:16px;">Clients can adjust or revoke any permission at any time. And if they ever want to disconnect, one tap removes your access entirely — no awkward conversation required.</p>
+        </div>
+        <div class="feature-visual">
+          <div class="card">
+            <div class="muted-label" style="margin-bottom:12px;">Coach suggestion — from Marcus</div>
+            <div class="suggestion-exercise">Barbell Back Squat</div>
+            <div class="suggestion-change">
+              <span class="adjust-was">175 lbs × 3×8</span>
+              <span class="adjust-arrow">→</span>
+              <span class="adjust-now">185 lbs × 3×8</span>
+            </div>
+            <div class="suggestion-note">"You've been consistent for 6 weeks — time to add a little weight. Take it if it feels right."</div>
+            <div style="display:flex;gap:8px;margin-top:14px;">
+              <div class="btn btn-green" style="flex:1;text-align:center;font-size:12px;padding:9px 12px;">Accept</div>
+              <div class="btn" style="flex:1;text-align:center;font-size:12px;padding:9px 12px;border:0.5px solid var(--border);">Not yet</div>
+            </div>
+          </div>
+          <div class="card" style="margin-top:12px;">
+            <div class="muted-label" style="margin-bottom:8px;">Permission settings for Marcus</div>
+            <div class="perm-row"><span>Visibility</span><span class="perm-on">On</span></div>
+            <div class="perm-row"><span>Suggestions</span><span class="perm-on">On</span></div>
+            <div class="perm-row"><span>Auto-apply changes</span><span class="perm-off">Off</span></div>
+            <div class="card-note" style="margin-top:10px;">You control this. Change or remove anytime.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Social/community -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="feature-block feature-block-reverse">
+        <div class="feature-copy">
+          <div class="feature-label">Community</div>
+          <h2>Encouragement, not<br>competition.</h2>
+          <p class="body-text">Gevity has a social layer — but it's a small one, by design. Your clients can connect with friends and family, share workouts, and cheer each other on.</p>
+          <p class="body-text">What they won't see in someone else's feed: rep counts, weights, or anything that turns consistency into a contest. Just the fact that their friend showed up today — and a way to say something about it.</p>
+          <p class="body-text">For you as a coach, this means your clients have a small support system around them between sessions. People who notice when they miss a week. That matters more than any feature you could build.</p>
+          <div class="callout">
+            <div class="callout-icon">🙌</div>
+            <div><em>"You'll see when your clients show up. Not how much they lifted — just that they did. And you can leave a note that says so."</em></div>
+          </div>
+        </div>
+        <div class="feature-visual">
+          <div class="card">
+            <div class="muted-label" style="margin-bottom:12px;">Activity — your clients</div>
+            <div class="activity-row">
+              <div class="activity-avatar">S</div>
+              <div>
+                <div style="font-size:14px;color:var(--text-dark);font-weight:500;">Sarah logged workout #31</div>
+                <div style="font-size:12px;color:var(--text-light);">2 hours ago · Leg Day A</div>
+              </div>
+              <div class="activity-cheer">👏</div>
+            </div>
+            <div class="activity-row">
+              <div class="activity-avatar">J</div>
+              <div>
+                <div style="font-size:14px;color:var(--text-dark);font-weight:500;">James hit a new milestone</div>
+                <div style="font-size:12px;color:var(--text-light);">Yesterday · 10 workouts in a row</div>
+              </div>
+              <div class="activity-cheer">🎉</div>
+            </div>
+            <div class="activity-row" style="opacity:0.5;">
+              <div class="activity-avatar">R</div>
+              <div>
+                <div style="font-size:14px;color:var(--text-dark);font-weight:500;">Rachel — no activity this week</div>
+                <div style="font-size:12px;color:var(--text-light);">Last seen 8 days ago</div>
+              </div>
+              <div class="activity-cheer">💌</div>
+            </div>
+            <div class="card-note">Rep counts and weights are never visible to others. Just the fact that they showed up.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Coach is also a user -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <h2>You're a user too.</h2>
+        <p class="body-text">Every coach on Gevity has a full user account. Track your own workouts, run your own 90-day plan, get your own playful stats. Use Gevity the same way your clients do — or don't, and just use the coach tools. Either way works.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section footer-cta section-green">
+    <div class="container text-center">
+      <div class="tag tag-center"><span class="tag-dot"></span>Free to get started</div>
+      <h2>Bring your clients to Gevity.</h2>
+      <p class="body-text" style="max-width:420px;margin:0 auto 28px;">Sign up, set up your coach profile, and send your first invite link. Takes five minutes.</p>
+      <a href="https://app.gevity.fit/onboarding" class="btn btn-green btn-lg">Sign up as a coach</a>
+      <p class="fine-print">Free to use · No platform fees · Your clients sign up free too</p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <a href="/" class="logo">gevity<span class="logo-accent">.fit</span></a>
+      <div class="footer-center">© 2026 Gevity · <a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a></div>
+      <div class="footer-right">An <a href="https://adaliaworks.com">Adalia Works</a> product</div>
+    </div>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How it works — Gevity</title>
+  <meta name="description" content="Gevity is built around the idea that consistency beats intensity. Here's how it works.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="logo">gevity<span class="logo-accent">.fit</span></a>
+      <div class="nav-links">
+        <a href="/how-it-works.html" class="nav-active">How it works</a>
+        <a href="/for-coaches.html">For coaches</a>
+      </div>
+      <a href="https://app.gevity.fit/onboarding" class="btn btn-green">Sign up for free</a>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="tag"><span class="tag-dot"></span>How it works</div>
+      <h1>Built for the long game.<br>Not the highlight reel.</h1>
+      <p class="body-text hero-sub">Most fitness apps are designed for people who are already motivated. Gevity is designed for everyone else — people who know consistency matters but need a little help staying on track when life gets in the way.</p>
+    </div>
+  </section>
+
+  <!-- 90-day pre-load -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="feature-block">
+        <div class="feature-copy">
+          <div class="feature-label">Day one</div>
+          <h2>Your first 90 days,<br>already written.</h2>
+          <p class="body-text">Most apps start empty. An empty app is a quiet accusation — you haven't done anything yet. Gevity starts full.</p>
+          <p class="body-text">After a two-minute setup, we pre-load 90 days of your personalised workout history. Your split, your frequency, your rest days — and yes, a vacation week baked right in. Because that's what the next 90 days actually look like for a real person.</p>
+          <p class="body-text">The conceit is simple: <strong>here's what your progress looks like if you just keep going.</strong> Now go make it real.</p>
+          <p class="body-text">Every workout you log replaces a fictional one. Your history becomes yours, one session at a time.</p>
+        </div>
+        <div class="feature-visual">
+          <div class="card">
+            <div class="card-header">
+              <span class="muted-label">Your history</span>
+              <span class="badge">Week 11 — on track</span>
+            </div>
+            <div class="card-title">Looking good.</div>
+            <p class="card-quote">"See where you took a week off? You got back to it. That's the whole game."</p>
+            <div class="cal-labels">
+              <span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span><span>S</span>
+            </div>
+            <div class="calendar" id="calendar"></div>
+            <div class="cal-legend">
+              <span><span class="dot dot-workout"></span>workout</span>
+              <span><span class="dot dot-vacation"></span>vacation</span>
+              <span><span class="dot dot-today"></span>today</span>
+              <span><span class="dot dot-ahead"></span>ahead</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dial back -->
+  <section class="section">
+    <div class="container">
+      <div class="feature-block feature-block-reverse">
+        <div class="feature-copy">
+          <div class="feature-label">When life happens</div>
+          <h2>Missed a week?<br>Gevity adjusts with you.</h2>
+          <p class="body-text">Taking time off — vacation, illness, just needing a break — is part of training. But coming back too hard after a week away is how people get hurt or burned out.</p>
+          <p class="body-text">When you return after a gap, Gevity gently suggests dialing back your weights and reps for a session or two. Not as a punishment — as a realistic ramp back up. Your body isn't quite where it was, and your plan should reflect that.</p>
+          <p class="body-text">Think of it as the app having a good memory and no judgment. It knows what you were doing, knows you stepped away, and meets you where you actually are.</p>
+          <div class="callout">
+            <div class="callout-icon">💡</div>
+            <div>
+              <strong>How we calculate it:</strong> We apply a small, time-based reduction to your targets for each missed session — enough to feel different, not enough to feel discouraging. You can always override it if you're feeling strong.
+            </div>
+          </div>
+        </div>
+        <div class="feature-visual">
+          <div class="card">
+            <div class="card-title" style="margin-bottom:12px;">Welcome back, Trey.</div>
+            <div class="body-text" style="font-size:14px;margin-bottom:16px;">You were out for 9 days. We've adjusted today's targets slightly so you can ease back in.</div>
+            <div class="adjust-row">
+              <div class="adjust-exercise">Barbell Back Squat</div>
+              <div class="adjust-change"><span class="adjust-was">185 lbs × 3×8</span><span class="adjust-arrow">→</span><span class="adjust-now">165 lbs × 3×6</span></div>
+            </div>
+            <div class="adjust-row">
+              <div class="adjust-exercise">Romanian Deadlift</div>
+              <div class="adjust-change"><span class="adjust-was">155 lbs × 3×10</span><span class="adjust-arrow">→</span><span class="adjust-now">140 lbs × 3×8</span></div>
+            </div>
+            <div class="adjust-row">
+              <div class="adjust-exercise">Leg Press</div>
+              <div class="adjust-change"><span class="adjust-was">270 lbs × 4×10</span><span class="adjust-arrow">→</span><span class="adjust-now">245 lbs × 4×8</span></div>
+            </div>
+            <div class="card-note">Feel stronger than that? Override any target during your workout.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Post-workout stats -->
+  <section class="section section-alt">
+    <div class="container">
+      <div class="feature-block">
+        <div class="feature-copy">
+          <div class="feature-label">After every workout</div>
+          <h2>The stat that makes<br>it click.</h2>
+          <p class="body-text">When you finish a workout, Gevity shows you something you won't find in any other fitness app: a single number that makes the whole thing feel real.</p>
+          <p class="body-text">We add up every pound you moved, multiply by how far it traveled, and give you a comparison that actually means something.</p>
+          <div class="callout callout-green">
+            <div style="font-size:28px;font-weight:500;color:var(--text-dark);margin-bottom:4px;">847 lbs · 340 ft</div>
+            <div class="body-text" style="font-size:14px;">That's like carrying a golden retriever up 17 flights of stairs.</div>
+          </div>
+          <p class="body-text">The comparison rotates based on how much you moved — sometimes it's a golden retriever, sometimes it's a bag of concrete, sometimes it's something funnier. The point is the same: you did something real today.</p>
+        </div>
+        <div class="feature-visual">
+          <div class="card">
+            <div class="muted-label" style="margin-bottom:12px;">Workout complete — Leg Day A</div>
+            <div class="stat-block">
+              <div class="stat-number">847 lbs</div>
+              <div class="stat-label">total weight moved</div>
+            </div>
+            <div class="stat-block">
+              <div class="stat-number">340 ft</div>
+              <div class="stat-label">combined distance</div>
+            </div>
+            <div class="stat-equiv">
+              🐕 Like carrying a golden retriever up <strong>17 flights of stairs.</strong>
+            </div>
+            <div class="divider"></div>
+            <div class="body-text" style="font-size:13px;">Share this with a note — or keep it to yourself. Either way, you earned it.</div>
+            <div style="display:flex;gap:8px;margin-top:12px;">
+              <div class="btn btn-green" style="flex:1;text-align:center;font-size:12px;padding:9px 12px;">Share to socials</div>
+              <div class="btn btn-dark" style="flex:1;text-align:center;font-size:12px;padding:9px 12px;">Done for today</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Social sharing -->
+  <section class="section">
+    <div class="container">
+      <div class="feature-block feature-block-reverse">
+        <div class="feature-copy">
+          <div class="feature-label">Share your wins</div>
+          <h2>Tell people you showed up.<br>Skip the rest.</h2>
+          <p class="body-text">After every workout you can share a summary — with an editable message, your playful stat, and a link that invites people to sign up.</p>
+          <p class="body-text">What you won't see in a Gevity share: how much you lifted, how many reps you did, or anything that turns fitness into a competition. Just the fact that you showed up, and something fun to make people smile.</p>
+          <p class="body-text">Because the goal isn't to impress anyone. It's to keep going.</p>
+        </div>
+        <div class="feature-visual">
+          <div class="card share-card">
+            <div class="share-header">
+              <div class="share-avatar">T</div>
+              <div>
+                <div style="font-size:14px;font-weight:500;color:var(--text-dark);">Trey Miller</div>
+                <div style="font-size:12px;color:var(--text-light);">just logged workout #23</div>
+              </div>
+            </div>
+            <div class="share-message">"I just tracked my 23rd consecutive workout on Gevity. Today I carried a golden retriever up 17 flights of stairs. 💪"</div>
+            <div class="share-cta-box">
+              <div style="font-size:12px;color:var(--text-mid);margin-bottom:6px;">Join Trey on Gevity — free forever.</div>
+              <div class="btn btn-green" style="font-size:12px;padding:8px 16px;">gevity.fit/join/trey</div>
+            </div>
+            <div style="font-size:11px;color:var(--text-light);margin-top:8px;">No rep counts. No weights. Just the fact that they showed up.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section footer-cta section-green">
+    <div class="container text-center">
+      <div class="tag tag-center"><span class="tag-dot"></span>Free forever plan</div>
+      <h2>Ready to start your 90 days?</h2>
+      <p class="body-text" style="max-width:400px;margin:0 auto 28px;">No streak to protect. No transformation to chase. Just you, showing up — for a long time.</p>
+      <a href="https://app.gevity.fit/onboarding" class="btn btn-green btn-lg">Sign up for free</a>
+      <p class="fine-print">No credit card · Free forever plan · Private by default</p>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <a href="/" class="logo">gevity<span class="logo-accent">.fit</span></a>
+      <div class="footer-center">© 2026 Gevity · <a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a></div>
+      <div class="footer-right">An <a href="https://adaliaworks.com">Adalia Works</a> product</div>
+    </div>
+  </footer>
+
+  <script>
+    const days = [1,1,0,1,0,0,0,1,1,0,1,0,0,0,0,0,0,0,0,1,0,1,1,0,0,1,0,0,1,0,1,1,0,0,0,1,1,0,1,0,0,0,1,1,0,1,0,0,0,1,0,0,1,0,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0];
+    const cal = document.getElementById('calendar');
+    days.forEach((d, i) => {
+      const cell = document.createElement('div');
+      cell.className = 'cal-cell';
+      const isVacation = i >= 35 && i <= 48;
+      const isFuture = i > 70;
+      const isToday = i === 70;
+      if (isToday) cell.classList.add('cal-today');
+      else if (isFuture) cell.classList.add('cal-future');
+      else if (isVacation) cell.classList.add('cal-vacation');
+      else if (d) cell.classList.add('cal-workout');
+      else cell.classList.add('cal-rest');
+      cal.appendChild(cell);
+    });
+  </script>
+
+</body>
+</html>

@@ -124,6 +124,82 @@ blockquote cite { font-size: 13px; color: var(--text-mid); font-style: normal; }
 .footer-center a, .footer-right a { color: var(--text-light); text-decoration: none; }
 .footer-center a:hover, .footer-right a:hover { color: var(--text-dark); }
 
+/* Nav active state */
+.nav-active { color: var(--text-dark) !important; font-weight: 500; }
+.logo { text-decoration: none; }
+
+/* Page hero (sub-pages) */
+.page-hero { padding: 56px 0 48px; border-bottom: 0.5px solid var(--border); }
+.page-hero h1 { max-width: 600px; }
+.hero-sub { max-width: 520px; margin-top: 4px; }
+
+/* Feature blocks */
+.feature-block { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; }
+.feature-block-reverse { direction: rtl; }
+.feature-block-reverse > * { direction: ltr; }
+.feature-label { font-size: 11px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--green); margin-bottom: 10px; }
+.feature-copy { display: flex; flex-direction: column; gap: 14px; }
+.feature-visual { position: sticky; top: 80px; display: flex; flex-direction: column; gap: 12px; }
+
+/* Callout boxes */
+.callout { display: flex; gap: 12px; align-items: flex-start; background: var(--cream-mid); border: 0.5px solid var(--border); border-radius: 10px; padding: 16px; font-size: 14px; color: var(--text-mid); line-height: 1.6; }
+.callout-green { background: var(--green-light); border-color: var(--border-green); }
+.callout-icon { font-size: 20px; flex-shrink: 0; margin-top: 1px; }
+
+/* Dial-back card */
+.adjust-row { display: flex; flex-direction: column; gap: 4px; padding: 10px 0; border-bottom: 0.5px solid var(--border); }
+.adjust-row:last-of-type { border-bottom: none; }
+.adjust-exercise { font-size: 13px; font-weight: 500; color: var(--text-dark); }
+.adjust-change { display: flex; align-items: center; gap: 8px; font-size: 12px; flex-wrap: wrap; }
+.adjust-was { color: var(--text-light); text-decoration: line-through; }
+.adjust-arrow { color: var(--text-light); }
+.adjust-now { color: var(--green-dark); font-weight: 500; }
+.card-note { font-size: 12px; color: var(--text-light); font-style: italic; border-top: 0.5px solid var(--border); padding-top: 10px; margin-top: 4px; line-height: 1.5; }
+
+/* Post-workout stats */
+.stat-block { padding: 10px 0; border-bottom: 0.5px solid var(--border); }
+.stat-number { font-size: 28px; font-weight: 500; color: var(--text-dark); line-height: 1.1; }
+.stat-label { font-size: 12px; color: var(--text-light); margin-top: 2px; }
+.stat-equiv { background: var(--green-light); border-radius: 8px; padding: 12px; font-size: 13px; color: var(--green-dark); line-height: 1.5; margin-top: 4px; }
+.divider { height: 0.5px; background: var(--border); margin: 4px 0; }
+
+/* Share card */
+.share-card { gap: 12px; }
+.share-header { display: flex; align-items: center; gap: 10px; }
+.share-avatar { width: 36px; height: 36px; border-radius: 50%; background: var(--green-light); display: flex; align-items: center; justify-content: center; font-size: 14px; font-weight: 500; color: var(--green-dark); flex-shrink: 0; }
+.share-message { font-size: 14px; color: var(--text-dark); line-height: 1.55; font-style: italic; border-left: 2px solid var(--border-green); padding-left: 12px; }
+.share-cta-box { background: var(--cream-mid); border-radius: 8px; padding: 12px; border: 0.5px solid var(--border); }
+
+/* Grid 2 */
+.grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+
+/* Permission levels */
+.permission-levels { display: flex; flex-direction: column; gap: 12px; margin-top: 8px; }
+.permission-level { display: flex; gap: 14px; align-items: flex-start; padding: 12px; background: var(--cream-mid); border-radius: 10px; border: 0.5px solid var(--border); }
+.permission-icon { font-size: 20px; flex-shrink: 0; width: 32px; height: 32px; display: flex; align-items: center; justify-content: center; border-radius: 8px; }
+.permission-view { background: var(--green-light); }
+.permission-suggest { background: #EEF0FB; }
+.permission-push { background: #FFF5E0; }
+.permission-name { font-size: 14px; font-weight: 500; color: var(--text-dark); margin-bottom: 2px; }
+.permission-desc { font-size: 13px; color: var(--text-mid); line-height: 1.5; }
+
+/* Suggestion card */
+.suggestion-exercise { font-size: 14px; font-weight: 500; color: var(--text-dark); }
+.suggestion-change { display: flex; align-items: center; gap: 8px; font-size: 13px; margin: 6px 0; }
+.suggestion-note { font-size: 13px; color: var(--text-mid); font-style: italic; line-height: 1.5; border-left: 2px solid var(--border-green); padding-left: 10px; }
+
+/* Permission toggle rows */
+.perm-row { display: flex; justify-content: space-between; align-items: center; padding: 8px 0; border-bottom: 0.5px solid var(--border); font-size: 13px; color: var(--text-mid); }
+.perm-row:last-of-type { border-bottom: none; }
+.perm-on { color: var(--green-dark); font-weight: 500; font-size: 12px; }
+.perm-off { color: var(--text-light); font-size: 12px; }
+
+/* Activity feed */
+.activity-row { display: flex; align-items: center; gap: 10px; padding: 10px 0; border-bottom: 0.5px solid var(--border); }
+.activity-row:last-of-type { border-bottom: none; }
+.activity-avatar { width: 32px; height: 32px; border-radius: 50%; background: var(--green-light); display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 500; color: var(--green-dark); flex-shrink: 0; }
+.activity-cheer { font-size: 20px; margin-left: auto; cursor: pointer; }
+
 /* Responsive */
 @media (max-width: 768px) {
   h1 { font-size: 28px; }
@@ -131,6 +207,10 @@ blockquote cite { font-size: 13px; color: var(--text-mid); font-style: normal; }
   .hero-inner { grid-template-columns: 1fr; gap: 32px; }
   .hero-cta { flex-direction: column; align-items: flex-start; gap: 12px; }
   .grid-3 { grid-template-columns: 1fr; }
+  .grid-2 { grid-template-columns: 1fr; }
+  .feature-block { grid-template-columns: 1fr; gap: 32px; }
+  .feature-block-reverse { direction: ltr; }
+  .feature-visual { position: static; }
   .nav-links { display: none; }
   .footer-inner { flex-direction: column; gap: 8px; text-align: center; }
 }
