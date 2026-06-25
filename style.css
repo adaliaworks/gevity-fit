@@ -200,6 +200,17 @@ blockquote cite { font-size: 13px; color: var(--text-mid); font-style: normal; }
 .activity-avatar { width: 32px; height: 32px; border-radius: 50%; background: var(--green-light); display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 500; color: var(--green-dark); flex-shrink: 0; }
 .activity-cheer { font-size: 20px; margin-left: auto; cursor: pointer; }
 
+/* Prose (Privacy, Terms) */
+.prose { max-width: 680px; }
+.prose-section { margin-bottom: 40px; padding-bottom: 40px; border-bottom: 0.5px solid var(--border); }
+.prose-section:last-child { border-bottom: none; }
+.prose-section h2 { font-size: 20px; margin-bottom: 12px; }
+.prose-section h3 { font-size: 15px; margin-top: 16px; margin-bottom: 8px; }
+.prose-section p { font-size: 15px; color: var(--text-mid); line-height: 1.7; margin-bottom: 12px; }
+.prose-section p:last-child { margin-bottom: 0; }
+.prose-section ul { padding-left: 20px; display: flex; flex-direction: column; gap: 8px; margin-bottom: 12px; }
+.prose-section li { font-size: 15px; color: var(--text-mid); line-height: 1.65; }
+
 /* Responsive */
 @media (max-width: 768px) {
   h1 { font-size: 28px; }
