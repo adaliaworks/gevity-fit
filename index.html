@@ -1,192 +1,360 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gevity — Longevity for regular people</title>
-  <meta name="description" content="A fitness tracker for people playing the long game. No shortcuts. No streaks to protect. Just showing up, for a long time.">
-  <link rel="stylesheet" href="style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>
+            Gevity — Fitness Tracker — Helping regular people pursue longevity
+        </title>
+        <meta
+            name="description"
+            content="A fitness tracker for people playing the long game. No shortcuts. No streaks to protect. Just showing up week after week."
+        />
+        <link rel="stylesheet" href="style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <!-- Nav -->
+        <nav class="nav">
+            <div class="nav-inner">
+                <div class="logo">
+                    gevity<span class="logo-accent">.fit</span>
+                </div>
+                <div class="nav-links">
+                    <a href="#how-it-works">How it works</a>
+                    <a href="#coaches">For coaches</a>
+                </div>
+                <a
+                    href="https://app.gevity.fit/onboarding"
+                    class="btn btn-green"
+                    >Sign up for free</a
+                >
+            </div>
+        </nav>
 
-  <!-- Nav -->
-  <nav class="nav">
-    <div class="nav-inner">
-      <div class="logo">gevity<span class="logo-accent">.fit</span></div>
-      <div class="nav-links">
-        <a href="#how-it-works">How it works</a>
-        <a href="#coaches">For coaches</a>
-      </div>
-      <a href="https://app.gevity.fit/onboarding" class="btn btn-green">Sign up for free</a>
-    </div>
-  </nav>
+        <!-- Hero -->
+        <section class="hero">
+            <div class="hero-inner">
+                <div class="hero-copy">
+                    <div class="tag">
+                        <span class="tag-dot"></span>
+                        Longevity for regular people
+                    </div>
+                    <h1>
+                        There are no shortcuts to<br />longevity. Just a steady
+                        walk,<br />in the
+                        <span class="green">right direction.</span>
+                    </h1>
+                    <p class="body-text">
+                        Gevity is a simple fitness tracker for people who aren't
+                        chasing a transformation — just showing up,
+                        consistently, for years. Putting in the effort that adds
+                        up.
+                    </p>
+                    <div class="hero-cta">
+                        <a
+                            href="https://app.gevity.fit/onboarding"
+                            class="btn btn-dark btn-lg"
+                            >Sign up for free</a
+                        >
+                        <a href="#how-it-works" class="link-green"
+                            >See how it works →</a
+                        >
+                    </div>
+                    <p class="fine-print">
+                        Free to get started · No credit card required
+                    </p>
+                </div>
+                <div class="hero-card card">
+                    <div class="card-header">
+                        <span class="muted-label">Your history</span>
+                        <span class="badge">Week 11 — on track</span>
+                    </div>
+                    <div class="card-title">Looking good.</div>
+                    <p class="card-quote">
+                        "See where you took a week off? But then got back to it.
+                        That's all it takes!"
+                    </p>
+                    <div class="cal-labels">
+                        <span>M</span><span>T</span><span>W</span><span>T</span
+                        ><span>F</span><span>S</span><span>S</span>
+                    </div>
+                    <div class="calendar" id="calendar"></div>
+                    <div class="cal-legend">
+                        <span
+                            ><span class="dot dot-workout"></span>workout</span
+                        >
+                        <span
+                            ><span class="dot dot-vacation"></span
+                            >vacation</span
+                        >
+                        <span><span class="dot dot-today"></span>today</span>
+                        <span><span class="dot dot-ahead"></span>ahead</span>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <!-- Hero -->
-  <section class="hero">
-    <div class="hero-inner">
-      <div class="hero-copy">
-        <div class="tag">
-          <span class="tag-dot"></span>
-          Longevity for regular people
-        </div>
-        <h1>No shortcuts to<br>longevity. Just this,<br>for a <span class="green">long time.</span></h1>
-        <p class="body-text">Gevity is a fitness tracker built for people who aren't chasing a transformation — just trying to show up, consistently, for years. The kind of effort that actually adds up.</p>
-        <div class="hero-cta">
-          <a href="https://app.gevity.fit/onboarding" class="btn btn-dark btn-lg">Sign up for free</a>
-          <a href="#how-it-works" class="link-green">See how it works →</a>
-        </div>
-        <p class="fine-print">Free forever plan · No credit card</p>
-      </div>
-      <div class="hero-card card">
-        <div class="card-header">
-          <span class="muted-label">Your history</span>
-          <span class="badge">Week 11 — on track</span>
-        </div>
-        <div class="card-title">Looking good.</div>
-        <p class="card-quote">"See where you took a week off? You got back to it. That's the whole game."</p>
-        <div class="cal-labels">
-          <span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span><span>S</span>
-        </div>
-        <div class="calendar" id="calendar"></div>
-        <div class="cal-legend">
-          <span><span class="dot dot-workout"></span>workout</span>
-          <span><span class="dot dot-vacation"></span>vacation</span>
-          <span><span class="dot dot-today"></span>today</span>
-          <span><span class="dot dot-ahead"></span>ahead</span>
-        </div>
-      </div>
-    </div>
-  </section>
+        <!-- How it works -->
+        <section class="section section-alt" id="how-it-works">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Your first 90 days,<br />already charted.</h2>
+                    <p class="body-text">
+                        Most apps start empty. Gevity starts full — with a
+                        realistic picture of what your next three months will
+                        look like if you just keep going.
+                    </p>
+                </div>
+                <div class="grid-3">
+                    <div class="card">
+                        <div class="step-row">
+                            <div class="step-num">1</div>
+                            <h3>Tell us how you train</h3>
+                        </div>
+                        <p class="body-text">
+                            A few quick questions — how many days a week, what
+                            kind of workouts, any cardio goals. This takes about
+                            three minutes.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <div class="step-row">
+                            <div class="step-num">2</div>
+                            <h3>We fill in the picture</h3>
+                        </div>
+                        <p class="body-text">
+                            Gevity pre-loads 90 days of your personalised
+                            history — your workouts, rest days, even a vacation
+                            week. Imperfect by design, because life happens.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <div class="step-row">
+                            <div class="step-num">3</div>
+                            <h3>You make it real, one day at a time</h3>
+                        </div>
+                        <p class="body-text">
+                            Every workout you log replaces a fictional one. Our
+                            fictionalhistory becomes yours for real. Come back
+                            in 90 days and see the difference.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <!-- How it works -->
-  <section class="section section-alt" id="how-it-works">
-    <div class="container">
-      <div class="section-header">
-        <h2>Your first 90 days,<br>already written.</h2>
-        <p class="body-text">Most apps start empty. Gevity starts full — with a realistic picture of what your next three months look like if you just keep going.</p>
-      </div>
-      <div class="grid-3">
-        <div class="card">
-          <div class="step-row">
-            <div class="step-num">1</div>
-            <h3>Tell us how you train</h3>
-          </div>
-          <p class="body-text">A few quick questions — how many days a week, what kind of workouts, any cardio goals. Takes about two minutes.</p>
-        </div>
-        <div class="card">
-          <div class="step-row">
-            <div class="step-num">2</div>
-            <h3>We fill in the picture</h3>
-          </div>
-          <p class="body-text">Gevity pre-loads 90 days of your personalised history — your workouts, rest days, even a vacation week. Imperfect by design.</p>
-        </div>
-        <div class="card">
-          <div class="step-row">
-            <div class="step-num">3</div>
-            <h3>Make it real, one day at a time</h3>
-          </div>
-          <p class="body-text">Every workout you log replaces a fictional one. Your history becomes yours. Come back in 90 days and see the difference.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+        <!-- Who this is for -->
+        <section class="section" id="coaches">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Where do you fit in?</h2>
+                    <p class="body-text">
+                        Gevity is perfect for you alone (or with friends!), you
+                        and a coach, or coaches and their clients.
+                    </p>
+                </div>
+                <div class="grid-3">
+                    <div class="card card-green">
+                        <div class="who-icon">👤</div>
+                        <h3>Just getting started?</h3>
+                        <p class="body-text">
+                            Sign up solo, answer a few questions, and your plan
+                            is ready. No coach needed. No commitment beyond
+                            showing up.
+                        </p>
+                        <a
+                            href="https://app.gevity.fit/onboarding"
+                            class="btn btn-green btn-block"
+                            >Sign up for free</a
+                        >
+                    </div>
+                    <div class="card card-green">
+                        <div class="who-icon">👥</div>
+                        <h3>Do you work with a coach?</h3>
+                        <p class="body-text">
+                            Sign up first, then invite your coach by sharing a
+                            link so they can connect to you. They get a view of
+                            your progress and can suggest adjustments as you
+                            progress.
+                        </p>
+                        <a
+                            href="https://app.gevity.fit/onboarding"
+                            class="btn btn-dark btn-block"
+                            >Sign up &amp; connect a coach</a
+                        >
+                    </div>
+                    <div class="card card-green">
+                        <div class="who-icon">🏋️</div>
+                        <h3>Are you a coach?</h3>
+                        <p class="body-text">
+                            Sign up and bring add your clients. Track your own
+                            workouts or just manage theirs — suggest weight and
+                            rep increases with one tap.
+                        </p>
+                        <a
+                            href="https://app.gevity.fit/onboarding"
+                            class="btn btn-dark btn-block"
+                            >Sign up as a coach</a
+                        >
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <!-- Who this is for -->
-  <section class="section" id="coaches">
-    <div class="container">
-      <div class="section-header">
-        <h2>Where do you fit in?</h2>
-        <p class="body-text">Gevity works for solo users, coached athletes, and coaches themselves — everyone starts the same way.</p>
-      </div>
-      <div class="grid-3">
-        <div class="card card-green">
-          <div class="who-icon">👤</div>
-          <h3>Just getting started</h3>
-          <p class="body-text">Sign up solo, answer a few questions, and your plan is ready. No coach needed. No commitment beyond showing up.</p>
-          <a href="https://app.gevity.fit/onboarding" class="btn btn-green btn-block">Sign up for free</a>
-        </div>
-        <div class="card card-green">
-          <div class="who-icon">👥</div>
-          <h3>You work with a coach</h3>
-          <p class="body-text">Sign up first, then invite your coach — or share a link so they can connect to you. They get a view of your progress and can suggest adjustments.</p>
-          <a href="https://app.gevity.fit/onboarding" class="btn btn-dark btn-block">Sign up &amp; connect a coach</a>
-        </div>
-        <div class="card card-green">
-          <div class="who-icon">🏋️</div>
-          <h3>You are a coach</h3>
-          <p class="body-text">Sign up and bring your clients. Track your own workouts or just manage theirs — suggest weight and rep increases with one tap.</p>
-          <a href="https://app.gevity.fit/onboarding" class="btn btn-dark btn-block">Sign up as a coach</a>
-        </div>
-      </div>
-    </div>
-  </section>
+        <!-- Testimonial -->
+        <section class="section section-green">
+            <div class="container">
+                <blockquote>
+                    <p>
+                        "I don't actually like going to the gym, but I've been
+                        going for two years now. Gevity makes it feel like
+                        something I'm already doing — not something I'm always
+                        about to start."
+                    </p>
+                    <cite>— Sarah M., 47</cite>
+                </blockquote>
+            </div>
+        </section>
 
-  <!-- Testimonial -->
-  <section class="section section-green">
-    <div class="container">
-      <blockquote>
-        <p>"I don't actually like going to the gym. But I've been going for two years now. Gevity makes it feel like something I'm already doing — not something I'm always about to start."</p>
-        <cite>— Sarah M., 47</cite>
-      </blockquote>
-    </div>
-  </section>
+        <!-- Footer CTA -->
+        <section class="section footer-cta">
+            <div class="container text-center">
+                <div class="tag tag-center">
+                    <span class="tag-dot"></span>
+                    Free forever plan
+                </div>
+                <h2>Ready to start your 90 days?</h2>
+                <p class="body-text">
+                    No streak to protect. No transformation to chase. Just you,
+                    showing up — for a long time.
+                </p>
+                <a
+                    href="https://app.gevity.fit/onboarding"
+                    class="btn btn-green btn-lg"
+                    >Sign up for free</a
+                >
+                <p class="fine-print">
+                    No credit card · Free forever plan · Private by default
+                </p>
+            </div>
+        </section>
 
-  <!-- Footer CTA -->
-  <section class="section footer-cta">
-    <div class="container text-center">
-      <div class="tag tag-center">
-        <span class="tag-dot"></span>
-        Free forever plan
-      </div>
-      <h2>Ready to start your 90 days?</h2>
-      <p class="body-text">No streak to protect. No transformation to chase. Just you, showing up — for a long time.</p>
-      <a href="https://app.gevity.fit/onboarding" class="btn btn-green btn-lg">Sign up for free</a>
-      <p class="fine-print">No credit card · Free forever plan · Private by default</p>
-    </div>
-  </section>
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-inner">
+                <div class="logo">
+                    gevity<span class="logo-accent">.fit</span>
+                </div>
+                <div class="footer-center">
+                    © 2026 Gevity · <a href="/privacy">Privacy</a> ·
+                    <a href="/terms">Terms</a>
+                </div>
+                <div class="footer-right">
+                    An
+                    <a href="https://adaliaworks.com">Adalia Works</a> product
+                </div>
+            </div>
+        </footer>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="footer-inner">
-      <div class="logo">gevity<span class="logo-accent">.fit</span></div>
-      <div class="footer-center">© 2026 Gevity · <a href="/privacy">Privacy</a> · <a href="/terms">Terms</a></div>
-      <div class="footer-right">An <a href="https://adaliaworks.com">Adalia Works</a> product</div>
-    </div>
-  </footer>
-
-  <script>
-    const days = [
-      1,1,0,1,0,0,0,
-      1,1,0,1,0,0,0,
-      0,0,0,0,0,1,0,
-      1,1,0,0,1,0,0,
-      1,0,1,1,0,0,0,  // vacation week follows
-      1,1,0,1,0,0,0,
-      1,1,0,1,0,0,0,
-      1,0,0,1,0,1,0,
-      0,0,0,0,0,0,0,  // vacation
-      0,0,0,0,0,0,0,  // vacation
-      1,1,0
-    ];
-    const vacationStart = 35, vacationEnd = 48, todayIndex = 70;
-    const cal = document.getElementById('calendar');
-    days.forEach((d, i) => {
-      const cell = document.createElement('div');
-      cell.className = 'cal-cell';
-      const isVacation = i >= vacationStart && i <= vacationEnd;
-      const isFuture = i > todayIndex;
-      const isToday = i === todayIndex;
-      if (isToday) cell.classList.add('cal-today');
-      else if (isFuture) cell.classList.add('cal-future');
-      else if (isVacation) cell.classList.add('cal-vacation');
-      else if (d) cell.classList.add('cal-workout');
-      else cell.classList.add('cal-rest');
-      cal.appendChild(cell);
-    });
-  </script>
-
-</body>
+        <script>
+            const days = [
+                1,
+                1,
+                0,
+                1,
+                0,
+                0,
+                0,
+                1,
+                1,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                1,
+                0,
+                1,
+                1,
+                0,
+                0,
+                1,
+                0,
+                0,
+                1,
+                0,
+                1,
+                1,
+                0,
+                0,
+                0, // vacation week follows
+                1,
+                1,
+                0,
+                1,
+                0,
+                0,
+                0,
+                1,
+                1,
+                0,
+                1,
+                0,
+                0,
+                0,
+                1,
+                0,
+                0,
+                1,
+                0,
+                1,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0, // vacation
+                0,
+                0,
+                0,
+                0,
+                0,
+                0,
+                0, // vacation
+                1,
+                1,
+                0,
+            ];
+            const vacationStart = 35,
+                vacationEnd = 48,
+                todayIndex = 70;
+            const cal = document.getElementById("calendar");
+            days.forEach((d, i) => {
+                const cell = document.createElement("div");
+                cell.className = "cal-cell";
+                const isVacation = i >= vacationStart && i <= vacationEnd;
+                const isFuture = i > todayIndex;
+                const isToday = i === todayIndex;
+                if (isToday) cell.classList.add("cal-today");
+                else if (isFuture) cell.classList.add("cal-future");
+                else if (isVacation) cell.classList.add("cal-vacation");
+                else if (d) cell.classList.add("cal-workout");
+                else cell.classList.add("cal-rest");
+                cal.appendChild(cell);
+            });
+        </script>
+    </body>
 </html>
