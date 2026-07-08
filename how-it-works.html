@@ -97,11 +97,19 @@
                                 ><span>T</span><span>F</span><span>S</span
                                 ><span>S</span>
                             </div>
-                            <div class="calendar" id="calendar"></div>
+                            <div class="calendar calendar-dual" id="calendar"></div>
                             <div class="cal-legend">
                                 <span
                                     ><span class="dot dot-workout"></span
                                     >workout</span
+                                >
+                                <span
+                                    ><span class="dot dot-cardio"></span
+                                    >Zone 2 cardio</span
+                                >
+                                <span
+                                    ><span class="dot dot-cardio-light"></span
+                                    >light cardio</span
                                 >
                                 <span
                                     ><span class="dot dot-vacation"></span
@@ -441,24 +449,61 @@
         </footer>
 
         <script>
+            // Strength band: 1 = workout logged, 0 = no strength that day.
             const days = [
                 1, 1, 0, 1, 0, 0, 0, 1, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0,
                 1, 1, 0, 0, 1, 0, 0, 1, 0, 1, 1, 0, 0, 0, 1, 1, 0, 1, 0, 0, 0,
                 1, 1, 0, 1, 0, 0, 0, 1, 0, 0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0,
                 0, 0, 0, 0, 0, 0, 0, 1, 1, 0,
             ];
+            // Cardio band: 2 = qualifying (>=30 min in Zone 2), 1 = light (moved
+            // but didn't clear the Zone 2 gate), 0 = none. Cardio only exists in
+            // the recent "real/current" stretch — the seeded history and the
+            // future projection stay strength-only (there is no seeded cardio).
+            const cardio = [
+                0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+                0, 0, 0, 0, 0, 0, 0, 2, 1, 2, 0, 0, 2, 1, 2, 0, 1, 2, 0, 2, 0,
+                1, 2, 0, 2, 0, 1, 0, 0, 0, 0,
+            ];
             const cal = document.getElementById("calendar");
             days.forEach((d, i) => {
                 const cell = document.createElement("div");
                 cell.className = "cal-cell";
+
                 const isVacation = i >= 35 && i <= 48;
                 const isFuture = i > 70;
                 const isToday = i === 70;
-                if (isToday) cell.classList.add("cal-today");
-                else if (isFuture) cell.classList.add("cal-future");
-                else if (isVacation) cell.classList.add("cal-vacation");
-                else if (d) cell.classList.add("cal-workout");
-                else cell.classList.add("cal-rest");
+
+                // Strength state — the top half, or the whole cell when there's
+                // no cardio that day.
+                let strength = null;
+                if (isToday) strength = "cal-today";
+                else if (isFuture) strength = "cal-future";
+                else if (isVacation) strength = "cal-vacation";
+                else if (d) strength = "cal-workout";
+
+                // Cardio state — the bottom half, or the whole cell when there's
+                // no strength that day.
+                const c = cardio[i];
+                const cardioCls =
+                    c === 2 ? "cal-cardio" : c === 1 ? "cal-cardio-light" : null;
+
+                const seg = (cls) => {
+                    const s = document.createElement("div");
+                    s.className = "cal-seg " + cls;
+                    cell.appendChild(s);
+                };
+
+                if (strength && cardioCls) {
+                    seg(strength); // strength on top,
+                    seg(cardioCls); // cardio on the bottom → split cell
+                } else if (cardioCls) {
+                    seg(cardioCls); // cardio only → single clay fill
+                } else {
+                    seg(strength || "cal-rest"); // strength only, or a rest day
+                }
+
                 cal.appendChild(cell);
             });
         </script>

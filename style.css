@@ -9,6 +9,9 @@
   --green: #6B8F5E;
   --green-dark: #3B5E2E;
   --green-light: #E8F0E4;
+  /* Cardio — warm clay, deliberately off the brand greens (mirrored in the app's application.css) */
+  --color-cardio: #C2703D;
+  --color-cardio-light: #E8BE9E;
   --text-dark: #2C2217;
   --text-mid: #7A6A58;
   --text-light: #9E8E7E;
@@ -86,11 +89,18 @@ h3 { font-size: 16px; font-weight: 500; margin-bottom: 8px; }
 .cal-labels span { font-size: 9px; color: var(--text-light); text-align: center; }
 .calendar { display: grid; grid-template-columns: repeat(7, 1fr); gap: 3px; }
 .cal-cell { height: 13px; border-radius: 2px; }
+/* Dual-band calendar (how-it-works): each cell is a taller vertical rect —
+   strength fills the top half, cardio the bottom. One modality = single fill,
+   both = a 50/50 split. Scoped so the homepage calendar stays single-band. */
+.calendar-dual .cal-cell { height: 22px; display: flex; flex-direction: column; overflow: hidden; }
+.calendar-dual .cal-seg { flex: 1 1 0; min-height: 0; }
 .cal-workout { background: var(--green-dark); }
 .cal-vacation { background: var(--border-green); }
 .cal-today { background: var(--green); }
 .cal-rest { background: var(--border); }
 .cal-future { background: var(--green-light); border: 0.5px solid var(--border-green); }
+.cal-cardio { background: var(--color-cardio); }
+.cal-cardio-light { background: var(--color-cardio-light); }
 .cal-legend { display: flex; gap: 10px; flex-wrap: wrap; }
 .cal-legend span { display: flex; align-items: center; gap: 4px; font-size: 10px; color: var(--text-light); }
 .dot { width: 9px; height: 9px; border-radius: 2px; display: inline-block; flex-shrink: 0; }
@@ -98,6 +108,8 @@ h3 { font-size: 16px; font-weight: 500; margin-bottom: 8px; }
 .dot-vacation { background: var(--border-green); }
 .dot-today { background: var(--green); }
 .dot-ahead { background: var(--green-light); border: 0.5px solid var(--border-green); }
+.dot-cardio { background: var(--color-cardio); }
+.dot-cardio-light { background: var(--color-cardio-light); }
 
 /* Steps */
 .step-row { display: flex; align-items: center; gap: 12px; margin-bottom: 8px; }
