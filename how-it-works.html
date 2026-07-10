@@ -108,10 +108,6 @@
                                     >Zone 2 cardio</span
                                 >
                                 <span
-                                    ><span class="dot dot-cardio-light"></span
-                                    >light cardio</span
-                                >
-                                <span
                                     ><span class="dot dot-vacation"></span
                                     >vacation</span
                                 >
@@ -475,19 +471,20 @@
                 const isFuture = i > 70;
                 const isToday = i === 70;
 
-                // Strength state — the top half, or the whole cell when there's
-                // no cardio that day.
+                // Strength state — the left half, or the whole cell when
+                // there's no cardio that day.
                 let strength = null;
                 if (isToday) strength = "cal-today";
                 else if (isFuture) strength = "cal-future";
                 else if (isVacation) strength = "cal-vacation";
                 else if (d) strength = "cal-workout";
 
-                // Cardio state — the bottom half, or the whole cell when there's
-                // no strength that day.
+                // Cardio state — the right half, or the whole cell when
+                // there's no strength that day. Light (sub-30-min) cardio
+                // gets no tile of its own (#133) — only a qualifying Zone-2
+                // session (2) counts as "cardio happened" here.
                 const c = cardio[i];
-                const cardioCls =
-                    c === 2 ? "cal-cardio" : c === 1 ? "cal-cardio-light" : null;
+                const cardioCls = c === 2 ? "cal-cardio" : null;
 
                 const seg = (cls) => {
                     const s = document.createElement("div");
@@ -496,10 +493,10 @@
                 };
 
                 if (strength && cardioCls) {
-                    seg(strength); // strength on top,
-                    seg(cardioCls); // cardio on the bottom → split cell
+                    seg(strength); // strength on the left,
+                    seg(cardioCls); // cardio on the right → split cell
                 } else if (cardioCls) {
-                    seg(cardioCls); // cardio only → single clay fill
+                    seg(cardioCls); // cardio only → single green fill
                 } else {
                     seg(strength || "cal-rest"); // strength only, or a rest day
                 }
