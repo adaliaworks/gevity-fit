@@ -1,0 +1,51 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Adalia Works//Claude Worklog//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VTIMEZONE
+TZID:America/New_York
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0400
+TZNAME:EDT
+DTSTART:20260308T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0400
+TZOFFSETTO:-0500
+TZNAME:EST
+DTSTART:20261101T020000
+RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:claude-worklog-20260710-mvp-features-merge-spree@adaliaworks
+DTSTAMP:20260710T193800Z
+DTSTART;TZID=America/New_York:20260710T130000
+DTEND;TZID=America/New_York:20260710T154500
+SUMMARY:Gevity: MVP feature sprint + green grid redesign + deploy spree
+DESCRIPTION:Afternoon session on app-gevity-fit (Rails 8 fitness app) and t
+ he gevity-fit marketing site. Implemented and shipped four MVP features\, 
+ redesigned the consistency-grid color scheme across both repos\, then merg
+ ed and production-deployed six PRs in sequence\, watching each deploy reso
+ lve before moving to the next.\n\nDeliverables (merged + deployed):\n• #
+ 119 — Self-serve account deletion + data export\, retired the dead KillC
+ ontroller (PR #130)\n• #133 — Green-only consistency grid palette\, dr
+ op the light-cardio tile\, vertical split — app-gevity-fit (PR #134) and
+  the gevity-fit marketing site\n• #109 — Cold-start fix (PR #127) — 
+ confirmed live: /up response time went 22.5s to 0.14s\n• #125 — Automa
+ ted pg_dump backups to Tigris (PR #126)\; nightly job still needs a one-ti
+ me manual Tigris/Fly-secrets setup\n• #76 — Lifecycle jobs for the pre
+ -loaded onboarding chart (PR #129) — required rebasing to resolve a conf
+ ig/recurring.yml conflict against #125\n• #135 — Cardio dropdown: orde
+ r by most-recent-use\, not frequency (filed + PR #136)\n\nOpened\, held fo
+ r Trey's own review (not merged this session):\n• #30 — MFA via email 
+ OTP (PR #131)\n• #32 — Slipping-schedule nudges (PR #132)\n\nAlso: rec
+ overed an orphaned local git commit (8 historical ICS worklog files) via r
+ eflog after an accidental git reset --hard.\n\nRaw (un-rounded) window: ~1
+ 3:00 EDT (research/implementation before the first commit at 13:50:17) to 
+ 15:32:11 EDT (#136 deploy completion). Rounded to 13:00-15:45.
+END:VEVENT
+END:VCALENDAR

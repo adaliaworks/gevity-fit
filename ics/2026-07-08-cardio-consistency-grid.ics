@@ -1,0 +1,31 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Adalia Works//Gevity Worklog//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VTIMEZONE
+TZID:America/New_York
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0400
+TZNAME:EDT
+DTSTART:19700308T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0400
+TZOFFSETTO:-0500
+TZNAME:EST
+DTSTART:19701101T020000
+RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:20260708-gevity-cardio-consistency-grid@gevity.fit
+DTSTAMP:20260708T210117Z
+DTSTART;TZID=America/New_York:20260708T160000
+DTEND;TZID=America/New_York:20260708T164500
+SUMMARY:Gevity — cardio consistency grid on how-it-works (mirrors app #124)
+DESCRIPTION:Ported the app's new cardio consistency grid (app-gevity-fit PR #124\, issue #112) into the static design source of truth — the how-it-works calendar the Rails grid was ported from.\n\nDeliverables:\n- Dual-band day cells: strength fills the top half\, cardio the bottom\; single fill for one modality\, a 50/50 split when both happened.\n- Added warm-clay cardio tokens to style.css :root — --color-cardio (#C2703D\, Zone 2 qualifying) and --color-cardio-light (#E8BE9E\, light movement).\n- Added "Zone 2 cardio" + "light cardio" legend entries and a realistic cardio mix in the recent real/current band (seeded history + future projection stay strength-only).\n- Scoped the dual-band CSS to .calendar-dual so the homepage grid (index.html) stays single-band and unchanged.\n- Verified in-browser at 380px (no horizontal overflow) and at desktop width.\n- Commit 97c331e on main (how-it-works.html\, style.css) — pushed to origin in the following session.\n\nRaw window (America/New_York): ~16:05 start (repo exploration + design preceded the commit\; launch.json/preview setup at 16:29) to 16:35:58 (ff-merge to main) plus completion report ~16:37. Rounded to 16:00–16:45.
+END:VEVENT
+END:VCALENDAR

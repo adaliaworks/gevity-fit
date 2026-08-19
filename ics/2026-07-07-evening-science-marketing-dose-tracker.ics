@@ -1,0 +1,31 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Adalia Works//Gevity Worklog//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VTIMEZONE
+TZID:America/New_York
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0400
+TZNAME:EDT
+DTSTART:19700308T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0400
+TZOFFSETTO:-0500
+TZNAME:EST
+DTSTART:19701101T020000
+RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:20260707-gevity-science-marketing-dose-tracker@gevity.fit
+DTSTAMP:20260707T230600Z
+DTSTART;TZID=America/New_York:20260707T170000
+DTEND;TZID=America/New_York:20260707T191500
+SUMMARY:Gevity — science/marketing review + weekly-dose tracker (#116)
+DESCRIPTION:Science + marketing review of gevity.fit and the app roadmap\, then shipped the weekly-dose tracker.\n\nDeliverables:\n- Fact-checked the 4 cited studies on the science page (Mandsager 2018\, WHO 2020\, Momma 2022\, Shailendra 2022) and gathered bolstering evidence (Kokkinos 750k CRF study\, the combined-40% mortality stat\, adherence + grip-strength data).\n- Filed 7 roadmap issues: #114 auto dial-back\, #115 playful post-workout stat\, #116 weekly-dose tracker\, #117 Zone-2 gating\, #118 share card\, #119 self-serve delete/export\, #120 coach-connections epic.\n- Marketing copy edits saved as *-NEW.html in the gevity-fit repo (science / index / how-it-works / for-coaches): overstatement fixes ("maximize" -> "capture most")\, reframed the inconsistency claim\, added the combined-40% stat + Kokkinos study\, DOI citation links + "last reviewed" stamp\, streak-language fixes\, and flagged the fabricated testimonial.\n- PR #121 — weekly-dose tracker on the dashboard (Closes #116): merged + deployed to prod.\n- PR #122 — bump json to 2.20.0 to clear bundler-audit advisory CVE-2026-54696: merged + deployed to prod.\n- 2 production deploys via CI auto-deploy; prod verified healthy (HTTP 302\, ~16s cold-start — see open issue #109).\n\nRaw window (America/New_York): ~17:06 start (session began before issue #114 was filed at 17:26\; site read + research/report preceded it) to 19:00:47 (#116 prod deploy complete) plus post-deploy verification ~19:05. Rounded to 17:00–19:15.
+END:VEVENT
+END:VCALENDAR
