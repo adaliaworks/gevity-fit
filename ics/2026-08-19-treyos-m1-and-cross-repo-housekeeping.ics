@@ -1,0 +1,67 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Adalia Works//Claude Worklog//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VTIMEZONE
+TZID:America/New_York
+BEGIN:DAYLIGHT
+TZOFFSETFROM:-0500
+TZOFFSETTO:-0400
+TZNAME:EDT
+DTSTART:20260308T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=2SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:-0400
+TZOFFSETTO:-0500
+TZNAME:EST
+DTSTART:20261101T020000
+RRULE:FREQ=YEARLY;BYMONTH=11;BYDAY=1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:claude-worklog-20260819-treyos-m1-and-cross-repo-housekeeping@adaliaworks
+DTSTAMP:20260819T214500Z
+DTSTART;TZID=America/New_York:20260819T101500
+DTEND;TZID=America/New_York:20260819T170000
+SUMMARY:treyOS Milestone 1 shipped + cross-repo housekeeping
+DESCRIPTION:Milestone 1 of treyOS (a new personal-operating-system proje
+ ct) went from an empty repo to a working\, argue-with-able capacity mod
+ el\, plus unrelated maintenance landed in three other repos the same d
+ ay.\n\ntreyOS — Milestone 1 (Capacity Engine)\, all 7 issues closed:\n
+ • Repo created (adaliaworks/treyOS)\, CLAUDE.md/SPEC.md committed\, 7
+  GitHub milestones + 11 issues filed\n• #1 — Project scaffolding: R
+ ails 8\, Postgres\, Solid Queue/Cache/Cable\, Kamal\, Standard Ruby\, C
+ I\n• #2 — Domain schema & models: 9 tables (commitments\, commitmen
+ t_events\, persons\, capacity_blocks\, ...)\, uuid primary keys\, Activ
+ eRecord Encryption wired and verified against a live round trip\n•
+ #3 — Manual commitment entry: CRUD + explicit state-transition method
+ s\, each pairing a state change with an audit-trail event in the same
+ transaction\n• #4 — Capacity engine core: a pure/DB-free CapacityEng
+ ine computing floor/ceiling capacity and required load over a date ran
+ ge\n• #5 — Backward pass & recovery-time warning: finds the next re
+ al protected block (never hardcoded to a day of week)\, names the fewe
+ st commitments that clear an overflow\n• #6 — Three-horizon dashboa
+ rd: 0-14 day execution grid\, 15-90 day capacity-vs-load curve as a ser
+ ver-rendered SVG\, 90-180 day monthly bands\n• #7 — Seed data & M1
+ acceptance pass: a realistic synthetic quarter\, verified with a live
+ browser walkthrough rather than just green tests\n\nFound and fixed re
+ al bugs along the way rather than trusting the code: a validation that
+  blocked capacity blocks from running to end-of-day\, a missing load-m
+ ultiplier weighting in the backward pass that was silently hiding over
+ flow\, an integer-division bug collapsing the chart's gridlines\, and
+ a missing test-environment encryption keyset that would have broken CI
+  on the first PR.\n\nOther repos (separate sessions\, same day):\n•
+ facilitimer — #9 menu bar mini-mode implemented and closed\, completi
+ ng Milestone 3\n• gevity-fit — repo cleanup: committed four previou
+ sly local-only ICS worklogs\, added a .gitignore\n• app-gevity-fit
+ — matching cleanup (PR #177\, open) plus two Dependabot merges: Rails
+  8.1.3→8.1.3.1 (#166)\, Brakeman 8.0.5→8.0.6 (#175)\n\nRaw (un-round
+ ed) window: treyOS session start ~2026-08-19T14:15Z (10:15 AM EDT\, es
+ timated — substantial design discussion preceded the first commit)\,
+  through the day's last confirmed deliverable\, the Brakeman Dependabo
+ t merge at 2026-08-19T20:59:54Z (4:59:54 PM EDT). Rounded to 10:15–17
+ :00 EDT.
+END:VEVENT
+END:VCALENDAR
